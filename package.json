@@ -2,12 +2,6 @@
   "name": "see-2",
   "version": "0.0.1",
   "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/hardhat",
-      "packages/nextjs"
-    ]
-  },
   "scripts": {
     "account": "pnpm run --filter=@see-2/hardhat account",
     "chain": "pnpm run --filter=@see-2/hardhat chain",
