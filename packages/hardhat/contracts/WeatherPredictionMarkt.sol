@@ -21,6 +21,7 @@ contract WeatherPredictionMarkt {
 	mapping(BetSide => uint) public betsPerSide;
 	mapping(address => mapping(BetSide => uint)) public betsPerGambler;
 	address public oracle;
+	IKintoID public kintoIdChecker;
 
 	struct PredictionLocation {
 		int32 latitude;
@@ -59,7 +60,7 @@ contract WeatherPredictionMarkt {
 		uint256 value
 	);
 
-	constructor(address _oracle, string _prediction, int32[] data) {
+	constructor(address _kintoIdChecker, address _oracle, string _prediction, int32[] data) {
 		require(data.length == 3);
 		require(data[0] <= MAX_LATITUDE && data[0] >= MIN_LATITUDE);
 		require(data[1] <= MAX_LONGITUDE && data[1] >= MIN_LONGITUDE);
@@ -68,6 +69,7 @@ contract WeatherPredictionMarkt {
 		betLocation.longitude = data[1];
 		betLocation.radius = data[2];
 
+		kintoIdChecker = IKintoID(_kintoIdChecker);
 		oracle = _oracle;
 		prediction = _prediction;
 	}
@@ -78,7 +80,7 @@ contract WeatherPredictionMarkt {
 	 */
 	function bet(BetSide _betSide) public payable {
 		require(betFinished == false, 'Prediction location is not available.');
-		require(IKintoID.isKYC(msg.sender) == true, 'Betting address needs to have a valid KYC.');
+		require(kintoIdChecker.isKYC(msg.sender) == true, 'Betting address needs to have a valid KYC.');
 		betsPerSide[_betSide] += msg.value;
 		betsPerGambler[msg.sender][_betSide] += msg.value;
 
@@ -97,7 +99,7 @@ contract WeatherPredictionMarkt {
 	 */
 	function withdraw() external {
 		uint gamblerBet = betsPerGambler[msg.sender][result.winner];
-		require(IKintoID.isKYC(msg.sender) == true, 'Betting address needs to have a valid KYC.');
+		require(kintoIdChecker.isKYC(msg.sender) == true, 'Betting address needs to have a valid KYC.');
 		require(gamblerBet > 0, 'you do not have any stake in the winning prediction');
 		require(betFinished == true, 'Bet result is not yet available.');
 
