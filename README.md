@@ -62,3 +62,15 @@ Visit your app on: `http://localhost:3000`. You can interact with your smart con
 Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
 
 To know more about its features, check out our [website](https://scaffoldeth.io).
+
+### Resources
+
+- [envio-cli](https://docs.envio.dev/docs/HyperIndex/cli-commands)
+- [KintoID](https://docs.kinto.xyz/kinto-the-safe-l2/building-on-kinto/smart-contract-reference/kintoid)
+- [Prediction Markets: Bottlenecks and the Next Major Unlocks](https://mirror.xyz/1kx.eth/jnQhA56Kx9p3RODKiGzqzHGGEODpbskivUUNdd7hwh0)
+- [AuthaGraph projection](https://en.m.wikipedia.org/wiki/AuthaGraph_projection)
+- [The SackRace](https://www.bettingodds.com/thesackrace)
+- [Betting On The Weather With Bookmakers](https://www.olbg.com/blogs/betting-weather-bookmakers)
+- [Weather Betting Sites](https://www.onlinebettingsites.com/novelty/weather/)
+- [Can You Get Rich Betting on the Weather?](https://www.mentalfloss.com/article/28636/can-you-get-rich-betting-weather)
+- [Enter Weather 3.0](https://weatherxm.com/)
