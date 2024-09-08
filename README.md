@@ -3,7 +3,7 @@
 
 ## 🏗 We used Scaffold-ETH 2 to get started
 
-<h4 align="center">
+<h4>
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
@@ -23,8 +23,6 @@ To get started follow the steps below:
 1. Clone this repo & install dependencies
 
 ```
-git clone https://github.com/scaffold-eth/scaffold-eth-2.git
-cd scaffold-eth-2
 pnpm install
 ```
 
@@ -54,7 +52,7 @@ Visit your app on: `http://localhost:3000`. You can interact with your smart con
 
 **What's next**:
 
-- Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
+- Edit your smart contract in `packages/hardhat/contracts`
 - Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
 - Edit your deployment scripts in `packages/hardhat/deploy`
 - Edit your smart contract test in: `packages/hardhat/test`. To run test use `pnpm hardhat:test`
@@ -64,9 +62,3 @@ Visit your app on: `http://localhost:3000`. You can interact with your smart con
 Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
 
 To know more about its features, check out our [website](https://scaffoldeth.io).
-
-## Contributing to Scaffold-ETH 2
-
-We welcome contributions to Scaffold-ETH 2!
-
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
